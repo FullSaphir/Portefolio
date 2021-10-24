@@ -9,6 +9,17 @@
 		<title>Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="theme-color" content="#ffffff">
+		<!-- for FF, Chrome, Opera -->
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<!--Vivaldi-->
+		<link rel="shortcut icon" href="images/logo.jpg" sizes="32x32">
+		
+		<!-- for IE -->
+		<link rel="icon" type="image/x-icon" href="images/logo.png" >
+		<link rel="shortcut icon" type="image/x-icon" href="images/logo.png"/>
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -22,14 +33,14 @@
 
 						<div class="content">
 							<div class="inner">
-								<h1>Portefolio</h1>
+								<h1>Portfolio</h1>
 								<h2>Corentin Burguiere</h2>
 								<p>"N'abandonnez pas. Les obstacles peuvent être surmontés par l'apprentissage et la stratégie." </br>-Hidetaka Miyazaki</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#intro">Action53</a></li>
+								<li><a href="#Action53">Action53</a></li>
 								<li><a href="#work">ㅤAurora</a></li>
 								<li><a href="#about">ㅤPrototypes</a></li>
 								<li><a href="#contact">À propos</a></li>
@@ -42,11 +53,26 @@
 					<div id="main">
 
 						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+							<article id="Action53">
+								<h2 class="major">Action53</h2>
+								<span class="image main">
+								
+								<div class="Diaporama">
+									<img class="mySlides" src="images/action1.png" style="width:100%">
+									<img class="mySlides" src="images/action2.png" style="width:100%">
+									<img class="mySlides" src="images/action3.png" style="width:100%">
+									<img class="mySlides" src="images/action4.png" style="width:100%">
+									<img class="mySlides" src="images/action5.png" style="width:100%">
+								</div>
+								
+								</span>
+								
+								<p>Logiciels utilisés : Unreal Engine 4, Blender, PAINT.NET et Audacity.
+								<p>Action53 est un jeu d'escape-game crée avec deux amis en 2019 en utilisant HTML, CSS et Javascript. Je l'ai ensuite refait sous l'Unreal Engine 4 en 2020.</a></p>
+								<p>Action53 se déroule dans une pièce mystérieuse. Le joueur doit trouver un moyen de sortir d'ici en résolvant les différentes énigmes dissimulées autour de lui. Ces énigmes sont toutes reliées à une ancienne série de meurtre s'étant étalée sur plusieurs années. Le coupable ne fut jamais retrouvé et le mystère resta entier. C'est donc au joueur de mettre fin à cette histoire en découvrant la vérité sur celle-ci. À moins bien sûr que la vérité ne soit trop dure à admettre ?</p>
+								<p>Action53 sous l'Unreal Engine 4 est téléchargeable ci-dessous.ㅤ</br>Quid de la version HTML ? Elle est cachée quelque part dans ce portfolio. Quitte à faire un portfolio, autant le rendre le plus ludique possible non ? </p>
+								<p><b><a href="jeux/Action53_R.zip">Télécharger Action53_R</a></b></p>
+							
 							</article>
 
 						<!-- Work -->
@@ -355,6 +381,23 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+		<script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 2500); // Change l'image toutes les 2 secondes
+		}
+		</script>
 
 	</body>
 </html>
